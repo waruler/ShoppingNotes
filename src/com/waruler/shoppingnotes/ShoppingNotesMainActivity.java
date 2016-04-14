@@ -33,7 +33,7 @@ public class ShoppingNotesMainActivity extends BaseActivity implements
 
 	private static final int ID = 10086;
 
-	//private ViewGroup mAdContainer;
+	private ViewGroup mAdContainer;
 	private SwipeMenuListView mNotesList;
 	private ShoppingNotesCursorAdapter mAdapter;
 
@@ -49,7 +49,7 @@ public class ShoppingNotesMainActivity extends BaseActivity implements
 
 		mActionBarBack.setOnClickListener(this);
 
-		//mAdContainer = (ViewGroup) findViewById(R.id.ad_container);
+		mAdContainer = (ViewGroup) findViewById(R.id.ad_container);
 		mNotesList = (SwipeMenuListView) findViewById(R.id.listview_shopping_notes);
 		View emptyView = findViewById(R.id.empty_view);
 		mNotesList.setEmptyView(emptyView);
