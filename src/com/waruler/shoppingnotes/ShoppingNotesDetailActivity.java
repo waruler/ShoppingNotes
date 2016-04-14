@@ -9,7 +9,6 @@ import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.InputMethodManager;
@@ -46,7 +45,6 @@ public class ShoppingNotesDetailActivity extends BaseActivity implements
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.activity_shopping_notes_detail);
-
 		mContext = this;
 
 		Intent intent = getIntent();
@@ -56,6 +54,7 @@ public class ShoppingNotesDetailActivity extends BaseActivity implements
 			mActionBarTitle.setText(title);
 		}
 
+		mActionBarBack.setOnClickListener(this);
 		mProductNameEditText = (EditText) findViewById(R.id.edittext_detail_product_name);
 		mProductCountEditText = (EditText) findViewById(R.id.edittext_detail_product_count);
 		findViewById(R.id.imageview_add).setOnClickListener(this);
@@ -161,7 +160,10 @@ public class ShoppingNotesDetailActivity extends BaseActivity implements
 			}
 
 			break;
-
+		case R.id.imageview_back:
+			// actionbar的返回按钮
+			finish();
+			break;
 		default:
 			break;
 		}

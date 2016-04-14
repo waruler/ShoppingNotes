@@ -123,7 +123,7 @@ public class ShoppingNotesMainActivity extends BaseActivity implements
 		switch (v.getId()) {
 		case R.id.imageview_back:
 			// actionbar的返回按钮
-
+			moveTaskToBack(false);
 			break;
 
 		case R.id.imageview_add:
@@ -148,7 +148,13 @@ public class ShoppingNotesMainActivity extends BaseActivity implements
 			break;
 		}
 	}
-
+	
+	@Override
+	public void onBackPressed() {
+		super.onBackPressed();
+		moveTaskToBack(false);
+	}
+	
 	public static SwipeMenuCreator getSwipeMenuCreator(final Context context) {
 		SwipeMenuCreator creator = new SwipeMenuCreator() {
 

@@ -41,24 +41,23 @@ public final class R {
         public static final int input_bg=0x7f02000b;
     }
     public static final class id {
-        public static final int ad_container=0x7f080003;
-        public static final int checkbox_shopping_status=0x7f08000e;
-        public static final int content_input=0x7f080004;
-        public static final int edittext_detail_product_count=0x7f080006;
-        public static final int edittext_detail_product_name=0x7f080005;
-        public static final int edittext_notes_title=0x7f08000a;
-        public static final int empty_view=0x7f080009;
-        public static final int imageview_add=0x7f080007;
+        public static final int ad_container=0x7f080002;
+        public static final int checkbox_shopping_status=0x7f08000d;
+        public static final int content_input=0x7f080003;
+        public static final int edittext_detail_product_count=0x7f080005;
+        public static final int edittext_detail_product_name=0x7f080004;
+        public static final int edittext_notes_title=0x7f080009;
+        public static final int empty_view=0x7f080008;
+        public static final int imageview_add=0x7f080006;
         public static final int imageview_back=0x7f080000;
-        public static final int listview_shopping_notes=0x7f08000b;
-        public static final int listview_shopping_notes_detail=0x7f080008;
+        public static final int listview_shopping_notes=0x7f08000a;
+        public static final int listview_shopping_notes_detail=0x7f080007;
         public static final int textview_action_bar_title=0x7f080001;
-        public static final int textview_edit=0x7f080002;
-        public static final int textview_notes_create_time=0x7f080010;
-        public static final int textview_notes_title=0x7f08000f;
-        public static final int textview_product_count=0x7f08000d;
-        public static final int textview_product_name=0x7f08000c;
-        public static final int textview_status=0x7f080011;
+        public static final int textview_notes_create_time=0x7f08000f;
+        public static final int textview_notes_title=0x7f08000e;
+        public static final int textview_product_count=0x7f08000c;
+        public static final int textview_product_name=0x7f08000b;
+        public static final int textview_status=0x7f080010;
     }
     public static final class layout {
         public static final int action_bar_notes_main=0x7f030000;
