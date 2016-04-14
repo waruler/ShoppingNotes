@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+    <string name="app_name">购物便签</string>
+	<string name="shopping_notes_empty_view_text">暂无购物便签</string>
+	<string name="edit">编辑</string>
+	<string name="notes_title_hint">请输入标题,创建新清单</string>
+	<string name="shoppint_notes_detail_empty_view_text">清单内没有需要购买的物品</string>
+	<string name="notes_product_name_hint">商品名称</string>
+	<string name="notes_produce_count_hint">数量</string>
+</resources>
