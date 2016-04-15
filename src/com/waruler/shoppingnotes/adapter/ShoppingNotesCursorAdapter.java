@@ -26,7 +26,7 @@ public class ShoppingNotesCursorAdapter extends CursorAdapter {
 			boolean autoRequery) {
 		super(context, c, autoRequery);
 		mInflater = LayoutInflater.from(context);
-		dateFormat = new SimpleDateFormat("yyyy.MM.dd HH:mm");
+		dateFormat = new SimpleDateFormat("yy.MM.dd");
 	}
 
 	@Override

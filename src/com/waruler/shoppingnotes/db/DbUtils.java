@@ -3,7 +3,6 @@ package com.waruler.shoppingnotes.db;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.util.Log;
 
 import com.waruler.shoppingnotes.db.NotesContentProvider.ShoppingNotes;
 import com.waruler.shoppingnotes.db.NotesContentProvider.ShoppingNotesDetail;
@@ -20,7 +19,6 @@ public class DbUtils {
 			if (cursor.getCount() > 0) {
 				cursor.moveToFirst();
 				int count = cursor.getInt(0);
-				Log.i("zk", "未完成的购物项有: " + count);
 				values.put("status", count == 0 ? 1 : 0);
 			}
 			context.getContentResolver().update(ShoppingNotes.CONTENT_URI,

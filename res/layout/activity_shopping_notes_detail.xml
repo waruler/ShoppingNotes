@@ -2,6 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
     tools:context="com.waruler.shoppingnotes.ShoppingNotesMainActivity" >
 
     <LinearLayout
@@ -30,26 +32,26 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
             android:layout_marginStart="25dp"
-            android:paddingLeft="10dp"
-            android:paddingStart="10dp"
-            android:paddingRight="10dp"
-            android:paddingEnd="10dp"
             android:background="@drawable/input_bg"
-            android:hint="@string/notes_product_name_hint" />
-        
+            android:hint="@string/notes_product_name_hint"
+            android:paddingEnd="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingStart="10dp" />
+
         <EditText
             android:id="@+id/edittext_detail_product_count"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
             android:layout_marginStart="25dp"
-            android:paddingLeft="10dp"
-            android:paddingStart="10dp"
-            android:paddingRight="10dp"
-            android:paddingEnd="10dp"
-            android:inputType="number"
             android:background="@drawable/input_bg"
-            android:hint="@string/notes_produce_count_hint" />
+            android:hint="@string/notes_produce_count_hint"
+            android:inputType="number"
+            android:paddingEnd="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingStart="10dp" />
 
         <ImageView
             android:id="@+id/imageview_add"
@@ -76,6 +78,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="@string/shoppint_notes_detail_empty_view_text"
+        android:textSize="18sp"
         android:visibility="visible" />
 
 </RelativeLayout>
