@@ -9,3 +9,7 @@ proguard/
 .classpath
 
 *.properties
+
+proguard-project.txt
+
+project.properties
