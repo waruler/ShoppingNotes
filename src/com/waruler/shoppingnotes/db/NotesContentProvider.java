@@ -1,5 +1,7 @@
 package com.waruler.shoppingnotes.db;
 
+import java.util.Arrays;
+
 import android.content.ContentProvider;
 import android.content.ContentResolver;
 import android.content.ContentUris;
@@ -224,7 +226,7 @@ public class NotesContentProvider extends ContentProvider {
 		try {
 			id = db.delete(tableName, whereClause, whereArgs);
 			Log.i(TAG, "id=" + id + " delete:" + tableName + "[" + whereClause
-					+ "," + whereArgs + "]");
+					+ "," + Arrays.toString(whereArgs) + "]");
 		} catch (Exception e) {
 			Log.d(TAG, e.getMessage());
 		}
@@ -232,6 +234,11 @@ public class NotesContentProvider extends ContentProvider {
 		return id;
 	}
 
+	/**
+	 * 在删除TYPE_SHOPPING_NOTES表的时候,必须将_id的值放在whereArgs的第一位置,<br>
+	 * 以方便删除TYPE_SHOPPING_NOTES_DETAIL里的具体内容
+	 * 
+	 * **/
 	@Override
 	public int delete(Uri uri, String whereClause, String[] whereArgs) {
 		SQLiteDatabase db = DbHelper.getDbHelper(getContext())
@@ -246,6 +253,11 @@ public class NotesContentProvider extends ContentProvider {
 			isNotes = true;
 			count = delete(db, DbHelper.SHOPPING_NOTES_TABLE_NAME, whereClause,
 					whereArgs);
+			if (whereClause.contains("_id")) {
+				if (whereArgs != null && whereArgs.length > 0) {
+					db.delete(SHOPPING_NOTES_DETAIL, "notes_id=?", new String[]{whereArgs[0]});
+				}
+			}
 			break;
 
 		case TYPE_SHOPPING_NOTES_DETAIL:
@@ -278,7 +290,7 @@ public class NotesContentProvider extends ContentProvider {
 		try {
 			count = db.update(tableName, values, whereClause, whereArgs);
 			Log.i(TAG, "count=" + count + " update:" + tableName + "["
-					+ whereClause + "," + whereArgs + "]");
+					+ whereClause + "," + Arrays.toString(whereArgs) + "]");
 		} catch (Exception e) {
 			Log.d(TAG, e.getMessage());
 		}
